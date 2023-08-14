@@ -1,0 +1,165 @@
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 50px;
+  position: fixed;
+  font-size: 1.1rem;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  z-index: 10;
+  animation: fadein 2s;
+}
+.header .group1 {
+  display: none;
+}
+.header .sing {
+  display: none;
+  color: var(--color-dark);
+  animation: typing 2.5s steps(23), blink 0.4s infinite step-end alternate;
+  font-weight: bold;
+  white-space: nowrap;
+  border-right: 2px solid var(--color-dark);
+  width: auto;
+  overflow: hidden;
+  font-size: 1.2rem;
+  padding-right: 5px;
+  margin-left: 20px;
+}
+.header .fa-solid {
+  color: var(--color-dark);
+}
+.header .group2 {
+  display: flex;
+  flex-direction: row;
+}
+.header .group2 a {
+  font-size: 1.2rem;
+}
+/* SimpleMenu */
+.header .simpleMenu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/* MenuToggle */
+.header .menuToggle {
+  display: none;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  float: right;
+}
+.header .menuToggle input {
+  display: block;
+  width: 40px;
+  height: 25px;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 4;
+  -webkit-touch-callout: none;
+}
+.header .menuToggle span {
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 100px;
+  margin-bottom: 7px;
+  position: relative;
+  background-color: var(--color-dark);
+  z-index: 3;
+}
+.header .menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(50deg) translate(-1px, 10px);
+  background-color: var(--color-dark);
+}
+.header .menuToggle span:nth-last-child(2) {
+  transform-origin: 10% 50%;
+}
+.header .menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.header .menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-50deg) translate(-1px, -4px);
+}
+.header .menuToggle input:checked ~ .menu{
+  transform: translateX(-70%);
+}
+.header .menuToggle .menu::before {
+  opacity: 0;
+}
+.header .menuToggle .menu::after {
+  opacity: 1;
+}
+.header .menuToggle .menu {
+  border: 1px solid rgba(196,196,196,1);
+  border-radius: 10px;
+  background: linear-gradient(130deg, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 38%, rgba(196,196,196,1) 100%);
+  -webkit-box-shadow: 2px 2px 19px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 19px -3px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 19px -3px rgba(0,0,0,0.75);
+  width: 200px;
+  height: auto;
+  min-height: 250px;
+  padding: 15px;
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(50%);
+  border-radius: 0 0 0 20px;
+  top: -40px;
+  left: 60px;
+  z-index: 2;
+}
+.header .menuToggle .menu span {
+  background-color: transparent;
+  display: block;
+  width: auto;
+  height: auto;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes typing {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Media Screen */
+@media (max-width: 700px) {
+  .header .simpleMenu {
+    display: flex;
+  }
+  .header .menuToggle {
+    display: none;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    padding: 20px 15px;
+  }
+}
