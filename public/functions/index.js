@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
+    if ($(this).scrollTop() >= 200) {
       var windowWidth = $(window).width();
       
       $('header').css('justify-content', 'space-between');
@@ -15,6 +15,12 @@ $(document).ready(function () {
         $('header #simpleMenu').css('display', 'flex');
         $('header #menuToggle').css('display', 'none');
       };
+
+      if(windowWidth <= -1) {
+        $('header #simpleMenu').css('display', 'flex');
+        $('header #menuToggle').css('display', 'none');
+      };
+      
 
       $('#scrollTop').css('display', 'block');
     } else {
