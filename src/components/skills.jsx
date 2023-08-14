@@ -34,7 +34,14 @@ export default function Skills() {
           <p>CSS</p>
         </div>
       </div>
-
+      <div className={styles.card}>
+        <div>
+          <Image src={'/resources/images/github.png'} alt='GitHub Icon' width={70} height={70}/>
+        </div>
+        <div>
+          <p>GitHub</p>
+        </div>
+      </div>
       <div className={styles.card}>
         <div>
           <Image src={'/resources/images/nodejs.png'} alt='Node JS Icon' width={70} height={70}/>
