@@ -22,8 +22,13 @@ $(document).ready(function () {
       $('header #group1').css('display', 'none');
       $('header #sing').css('display', 'none');
 
-      $('header #simpleMenu').css('display', 'flex');
-      $('header #menuToggle').css('display', 'none');
+      if(windowWidth <= 650) {
+        $('header #simpleMenu').css('display', 'none');
+        $('header #menuToggle').css('display', 'block');
+      } else {
+        $('header #simpleMenu').css('display', 'flex');
+        $('header #menuToggle').css('display', 'none');
+      };
 
       $('#scrollTop').css('display', 'none');
     };

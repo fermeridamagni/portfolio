@@ -25,17 +25,21 @@ export default function Projects() {
             <div className={styles.item}>
               <div>
                 <ul>
-                  <li className='bold'>Aedifika Grupo Inmobiliario</li>
-                  <ul>
-                    <li className={styles.item_image}>
-                      <div>
-                        <p>Creado con:</p>
-                      </div>
-                      <div>
-                        <Image src={'/resources/images/expressjs.png'} width={20} height={20} alt='Project Image'/>
-                      </div>
-                    </li>
-                  </ul>
+                  <div>
+                    <li className='bold'>Aedifika Grupo Inmobiliario</li>
+                  </div>
+                  <div>
+                    <p>Creado con:</p>
+                  </div>
+                  <div className={styles.item_image}>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/expressjs.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
               <div>
@@ -48,17 +52,21 @@ export default function Projects() {
             <div className={styles.item}>
               <div>
                 <ul>
-                  <li className='bold'>Laura Merida</li>
-                  <ul>
-                    <li className={styles.item_image}>
-                      <div>
-                        <p>Creado con:</p>
-                      </div>
-                      <div>
-                        <Image src={'/resources/images/nextjs.png'} width={20} height={20} alt='Project Image'/>
-                      </div>
-                    </li>
-                  </ul>
+                  <div>
+                    <li className='bold'>Laura Merida</li>
+                  </div>
+                  <div>
+                    <p>Creado con:</p>
+                  </div>
+                  <div className={styles.item_image}>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/nextjs.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
               <div>
@@ -84,17 +92,21 @@ export default function Projects() {
             <div className={styles.item}>
               <div>
                 <ul>
-                  <li className='bold'>Reloj Checador</li>
-                  <ul>
-                    <li className={styles.item_image}>
-                      <div>
-                        <p>Creado con:</p>
-                      </div>
-                      <div>
-                        <Image src={'/resources/images/reactnative.png'} width={20} height={20} alt='Project Image'/>
-                      </div>
-                    </li>
-                  </ul>
+                  <div>
+                    <li className='bold'>Reloj Checador</li>
+                  </div>
+                  <div>
+                    <p>Creado con:</p>
+                  </div>
+                  <div className={styles.item_image}>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/reactnative.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
               <div>
@@ -120,20 +132,26 @@ export default function Projects() {
             <div className={styles.item}>
               <div>
                 <ul>
-                  <li className='bold'>Password Generator</li>
-                  <ul>
-                    <li className={styles.item_image}>
-                      <div>
-                        <p>Creado con:</p>
-                      </div>
-                      <div>
-                        <Image src={'/resources/images/react.png'} width={20} height={20} alt='Project Image'/>
-                      </div>
-                      <div>
-                        <Image src={'/resources/images/bootstrap.png'} width={20} height={20} alt='Project Image'/>
-                      </div>
-                    </li>
-                  </ul>
+                  <div>
+                    <li className='bold'>Generador de Contraseñas</li>
+                  </div>
+                  <div>
+                    <p>Creado con:</p>
+                  </div>
+                  <div className={styles.item_image}>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/nextjs.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/bootstrap.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
               <div>
