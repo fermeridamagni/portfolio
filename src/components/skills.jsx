@@ -44,10 +44,34 @@ export default function Skills() {
       </div>
       <div className={styles.card}>
         <div>
+          <Image src={'/resources/images/supabase.png'} alt='Supabase Icon' width={70} height={70}/>
+        </div>
+        <div>
+          <p>Supabase</p>
+        </div>
+      </div>
+      <div className={styles.card}>
+        <div>
           <Image src={'/resources/images/nodejs.png'} alt='Node JS Icon' width={70} height={70}/>
         </div>
         <div>
           <p>Node JS</p>
+        </div>
+      </div>
+      <div className={styles.card}>
+        <div>
+          <Image src={'/resources/images/tailwindcss.png'} alt='Tailwind CSS Icon' width={70} height={70}/>
+        </div>
+        <div>
+          <p>Tailwind CSS</p>
+        </div>
+      </div>
+      <div className={styles.card}>
+        <div>
+          <Image src={'/resources/images/git.png'} alt='Git Icon' width={70} height={70}/>
+        </div>
+        <div>
+          <p>Git</p>
         </div>
       </div>
       <div className={styles.card}>
@@ -120,6 +144,14 @@ export default function Skills() {
         </div>
         <div>
           <p>Wordpress</p>
+        </div>
+      </div>
+      <div className={styles.card}>
+        <div>
+          <Image src={'/resources/images/firebase.png'} alt='Firebase Icon' width={70} height={70}/>
+        </div>
+        <div>
+          <p>Firebase</p>
         </div>
       </div>
     </div>

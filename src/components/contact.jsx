@@ -11,7 +11,7 @@ export default function Contact () {
             </div>
             <div>
               <p className='bold'>Estos son mis datos de contacto!</p>
-              <p>Si lo deseas puedes enviarme un correo a: <span className='bold'>fermeridamagni@icloud.com <i className="fa-brands fa-apple"></i></span></p>
+              <p>Si lo deseas puedes enviarme un correo a: <span className='bold'>contacto@magnideveloper.com</span></p>
             </div>
             <div>
               <p>O contactarme por mis redes sociales <i className='fa-solid fa-arrow-turn-down'/></p>

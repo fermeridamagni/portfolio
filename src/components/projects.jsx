@@ -39,6 +39,13 @@ export default function Projects() {
                         </div>
                       </li>
                     </ul>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/bootstrap.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </ul>
               </div>
@@ -73,6 +80,40 @@ export default function Projects() {
                 <Link href={{
                   pathname: '/proyectos',
                   query: { project: '2' }
+                }} className='btn btn-dark btn-sm'>Ver Proyecto <i className="fa-solid fa-star"></i></Link>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <div>
+                <ul>
+                  <div>
+                    <li className='bold'>Magni Developer</li>
+                  </div>
+                  <div>
+                    <p>Creado con:</p>
+                  </div>
+                  <div className={styles.item_image}>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/nextjs.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <div>
+                          <Image src={'/resources/images/firebase.png'} width={20} height={20} alt='Project Image'/>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+              <div>
+                <Link href={{
+                  pathname: '/proyectos',
+                  query: { project: '3' }
                 }} className='btn btn-dark btn-sm'>Ver Proyecto <i className="fa-solid fa-star"></i></Link>
               </div>
             </div>
@@ -145,6 +186,8 @@ export default function Projects() {
                           <Image src={'/resources/images/nextjs.png'} width={20} height={20} alt='Project Image'/>
                         </div>
                       </li>
+                    </ul>
+                    <ul>
                       <li>
                         <div>
                           <Image src={'/resources/images/bootstrap.png'} width={20} height={20} alt='Project Image'/>
