@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/react';
 
 import { fontText } from '@/resources/fonts/config.fonts';
 import Footer from '@/components/footer';
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload"></Script>
         <Script src="/functions/index.js" strategy="lazyOnload"></Script>
         
+        <Analytics/>
       </body>
     </html>
   );
