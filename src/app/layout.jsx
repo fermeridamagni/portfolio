@@ -30,7 +30,6 @@ export default function RootLayout({ children }) {
         <Footer/>
 
         <Script src="https://kit.fontawesome.com/3d7356b300.js"></Script>
-        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload"></Script>
         <Script src="/functions/index.js" strategy="lazyOnload"></Script>
         
         <Analytics/>
