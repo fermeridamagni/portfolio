@@ -1,4 +1,6 @@
 .main {
+  width: 100%;
+  height: 100vh;
   background-image: url(../../images/background_main.png);
   background-size: 100% 100%;
   background-size: cover;
@@ -18,7 +20,7 @@
   align-items: center;
   gap: 10px;
 }
-.main_text { 
+.main_text {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -60,15 +62,25 @@
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes typing {
-  0% { width: 0%; }
-  100% { width: 74%; }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 74%;
+  }
 }
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* MediaScreen */

@@ -1,18 +1,20 @@
 import Script from "next/script";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
-import { fontText } from '@/resources/fonts/config.fonts';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Providers from "./providers";
 
-import '@/resources/lib/bootstrap.min.css';
-import '@/resources/styles/globals.css';
+import { fontText, fontTitle } from "@/resources/fonts/config.fonts";
+import "@/resources/styles/globals.css";
 
 export const metadata = {
   title: "Fer Merida | Portfolio",
-  description: "My name is Fer Merida and I'm software developer, this is my portfolio!",
+  description:
+    "My name is Fer Merida and I'm software developer, this is my portfolio!",
   author: "Fer Merida | https://fermeridamagni.github.io/portfolio/",
-  keywords: "portfolio, fermeridamagni, fermerida, fer merida, fer, merida, software, development, developer, desarrollo, app",
+  keywords:
+    "portfolio, fermeridamagni, fermerida, fer merida, fer, merida, software, development, developer, desarrollo, app",
 };
 
 export default function RootLayout({ children }) {
@@ -21,19 +23,20 @@ export default function RootLayout({ children }) {
       <head>
         <Script src="/resources/lib/jQuery.min.js"></Script>
       </head>
-      <body className={fontText.variable}>
+      <body className={`${fontText.variable} ${fontTitle.variable}`}>
+        <Providers>
+          <Header />
 
-        <Header/>
+          {children}
 
-        {children}
-
-        <Footer/>
+          <Footer />
+        </Providers>
 
         <Script src="https://kit.fontawesome.com/3d7356b300.js"></Script>
         <Script src="/functions/index.js" strategy="lazyOnload"></Script>
-        
-        <Analytics/>
+
+        <Analytics />
       </body>
     </html>
   );
-};
+}

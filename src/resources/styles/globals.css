@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -16,11 +20,13 @@
   background-color: var(--color-yellow);
   color: var(--color-dark);
 }
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   width: 100%;
   height: 100%;
   background-color: var(--color-light);
+  font-family: var(--font-text);
   scrollbar-width: thin;
   scrollbar-color: var(--color-dark) transparent;
 }
@@ -33,13 +39,9 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--color-dark);
   border-radius: 10px;
 }
-p, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0rem;
-}
 a {
+  color: #202020;
   text-decoration: none;
-  color:var(--color-dark);
 }
 main {
   width: 100%;
@@ -56,8 +58,8 @@ section {
   --color-yellow-active: #9e9402;
   --color-light: #ededed;
   --color-dark: #202020;
-  --font-text: 'Gagalin';
-  --font-title: 'Varela Round'
+  --font-text: "Gagalin";
+  --font-title: "Varela Round";
 }
 
 /* Global Variables */
@@ -68,6 +70,9 @@ section {
 .bold {
   font-weight: bold;
   color: var(--color-dark);
+}
+.font-title {
+  font-family: var(--font-title);
 }
 
 /* btnScroll */
@@ -130,6 +135,10 @@ section {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

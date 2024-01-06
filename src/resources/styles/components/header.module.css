@@ -92,7 +92,7 @@
 .header .menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-50deg) translate(-1px, -4px);
 }
-.header .menuToggle input:checked ~ .menu{
+.header .menuToggle input:checked ~ .menu {
   transform: translateX(-70%);
 }
 .header .menuToggle .menu::before {
@@ -102,12 +102,17 @@
   opacity: 1;
 }
 .header .menuToggle .menu {
-  border: 1px solid rgba(196,196,196,1);
+  border: 1px solid rgba(196, 196, 196, 1);
   border-radius: 10px;
-  background: linear-gradient(130deg, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 38%, rgba(196,196,196,1) 100%);
-  -webkit-box-shadow: 2px 2px 19px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 19px -3px rgba(0,0,0,0.75);
-  box-shadow: 2px 2px 19px -3px rgba(0,0,0,0.75);
+  background: linear-gradient(
+    130deg,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(237, 237, 237, 1) 38%,
+    rgba(196, 196, 196, 1) 100%
+  );
+  -webkit-box-shadow: 2px 2px 19px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 19px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 19px -3px rgba(0, 0, 0, 0.75);
   width: 200px;
   height: auto;
   min-height: 250px;
@@ -136,15 +141,25 @@
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes typing {
-  0% { width: 0%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* Media Screen */

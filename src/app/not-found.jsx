@@ -4,7 +4,7 @@ import Script from "next/script";
 import '@/resources/lib/bootstrap.min.css';
 import '@/resources/styles/globals.css';
 import styles from '@/resources/styles/components/not-found.module.css';
-import { fontText, gagalin } from '@/resources/fonts/config.fonts';
+import { fontText } from '@/resources/fonts/config.fonts';
 
 import Footer from "@/components/footer";
 
@@ -15,7 +15,7 @@ export default function NotFound() {
         <main className={styles.main}>
           <div className={styles.card}>
             <div>
-              <h1 className={gagalin.className}><i className="fa-solid fa-xmark"></i> 404 <i className="fa-solid fa-xmark"></i></h1>
+              <h1 className='font-title'><i className="fa-solid fa-xmark"></i> 404 <i className="fa-solid fa-xmark"></i></h1>
             </div>
             <div>
               <div>

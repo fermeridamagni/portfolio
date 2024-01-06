@@ -1,19 +1,15 @@
-import { Tilt_Neon } from 'next/font/google';
-import localFont from 'next/font/local';
+import LocalFont from "next/font/local";
 
-export const fontText = Tilt_Neon({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-text'
+export const fontText = LocalFont({
+  src: "./TiltNeon-Regular.ttf",
+  style: "normal",
+  variable: "--font-text",
+  weight: "400",
 });
 
-export const gagalin = localFont({
-  src: [
-    { 
-      path: './gagalin.otf',
-      weight: '400',
-      variable: '--font-title',
-      style: 'regular'
-    }
-  ],
+export const fontTitle = LocalFont({
+  src: "./gagalin.otf",
+  style: "normal",
+  variable: "--font-title",
+  weight: "400",
 });

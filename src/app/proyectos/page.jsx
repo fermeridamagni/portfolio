@@ -1,14 +1,13 @@
 import Link from 'next/link';
 
 import styles from '@/resources/styles/components/proyectos/projects.module.css';
-import { gagalin } from '@/resources/fonts/config.fonts';
 
 export default function Projects() {
   return ( <>
     <main className={styles.projects}>
       <div className={styles.card}>
         <div>
-          <h1 className={gagalin.className}>En construcción!</h1>
+          <h1 className='font-title'>En construcción!</h1>
         </div>
         <div>
           <h4>Página en construcción.</h4>
