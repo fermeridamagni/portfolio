@@ -1,14 +1,19 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { NextUIProvider } from '@nextui-org/react';
+import { ThemeProvider } from "next-themes";
+import { NextUIProvider } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 export default function Providers({ children }) {
   const router = useRouter();
 
   return (
-    <NextUIProvider navigate={router.push}>
-      {children}
-    </NextUIProvider>
-  )
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="light"
+      disableTransitionOnChange
+    >
+      <NextUIProvider navigate={router.push}>{children}</NextUIProvider>
+    </ThemeProvider>
+  );
 }

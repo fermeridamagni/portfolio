@@ -1,115 +1,41 @@
 import Link from "next/link";
 
-import styles from "@/resources/styles/components/footer.module.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+config.autoAddCss = false;
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.groups}>
-        <div className={styles.group}>
-          <h2 className={styles.sing}>
-            <i className="fa-solid fa-at" /> Fer{" "}
-            <span className="bold">Merida</span>
-          </h2>
-          <p>Desarrollador FullStack</p>
-        </div>
-        <div className={styles.group}>
-          <div>
-            <p className={styles.title}>Redes sociales</p>
-          </div>
-          <div className={styles.items}>
-            <a
-              href="https://github.com/fermeridamagni"
-              className="line_hover"
-              target="_blank"
-            >
-              <span>
-                <i className="fa-brands fa-github"></i> GitHub
-              </span>
-            </a>
-            <span className={styles.separator}>
-              <i className="fa-solid fa-ellipsis-vertical"></i>
-            </span>
-            <a
-              href="https://discord.com/invite/9wxByqDPvr"
-              className="line_hover"
-              target="_blank"
-            >
-              <span>
-                <i className="fa-brands fa-discord"></i> Discord
-              </span>
-            </a>
-          </div>
-          <div className={styles.items}>
-            <a
-              href="https://www.instagram.com/fermeridamagni/"
-              className="line_hover"
-              target="_blank"
-            >
-              <span>
-                <i className="fa-brands fa-instagram"></i> Instagram
-              </span>
-            </a>
-            <span className={styles.separator}>
-              <i className="fa-solid fa-ellipsis-vertical"></i>
-            </span>
-            <a
-              href="https://www.linkedin.com/in/fer-merida-magni-0a629426a/"
-              className="line_hover"
-              target="_blank"
-            >
-              <span>
-                <i className="fa-brands fa-linkedin"></i> Linkedin
-              </span>
-            </a>
-            <span className={styles.separator}>
-              <i className="fa-solid fa-ellipsis-vertical"></i>
-            </span>
-            <a
-              href="https://twitter.com/fermeridamagni"
-              className="line_hover"
-              target="_blank"
-            >
-              <span>
-                <i className="fa-brands fa-x-twitter"></i> X-Twitter
-              </span>
-            </a>
-          </div>
-        </div>
-        <div className={styles.group}>
-          <div>
-            <p className={styles.title}>Secciones</p>
-          </div>
-          <div className={styles.items}>
-            <Link href="/" className="line_hover">
-              <span>Inicio</span>
-            </Link>
-            <span className={styles.separator}>
-              <i className="fa-solid fa-ellipsis-vertical"></i>
-            </span>
-            <a href="#aboutus" className="line_hover">
-              <span>¿Quién soy?</span>
-            </a>
-          </div>
-          <div className={styles.items}>
-            <a href="#projects" className="line_hover">
-              <span>Proyectos</span>
-            </a>
-            <span className={styles.separator}>
-              <i className="fa-solid fa-ellipsis-vertical"></i>
-            </span>
-            <a href="#contact" className="line_hover">
-              <span>Contacto</span>
-            </a>
-          </div>
-        </div>
+    <footer className="max-w-[1500px] w-full grid grid-cols-1 lg:grid-cols-4 py-6 px-5 lg:px-10 gap-6">
+      <div className="col-start-1 col-end-1 lg:col-start-2 lg:col-end-4">
+        <Link
+          href="#main"
+          className="flex flex-col justify-center items-center text-xl"
+        >
+          <span>
+            <FontAwesomeIcon icon={faAt} /> fermeridamagni
+          </span>
+          <span className="text-neutral-500 text-sm">Full Stack Developer</span>
+        </Link>
       </div>
-      <div className={styles.copyright}>
+
+      <div className="flex lg:col-start-4 lg:col-end-4 items-center justify-center lg:justify-end gap-6">
         <div>
-          <p>Copyrigth @fermeridamagni.</p>
+          <Link
+            href="https://www.instagram.com/fermeridamagni/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faInstagram} size="2xl" />
+          </Link>
         </div>
         <div>
-          <p>Todos los derechos reservados.</p>
+          <Link href="https://github.com/fermeridamagni" target="_blank">
+            <FontAwesomeIcon icon={faGithub} size="2xl" />
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,9 +1,11 @@
 import Main from "@/components/ui/main";
 
-export default function NotFound() {
+export default function Loading() {
   return (
     <Main flexCenter>
-      <p>Not Found</p>
+      <div>
+        <p>Cargando</p>
+      </div>
     </Main>
   );
 }

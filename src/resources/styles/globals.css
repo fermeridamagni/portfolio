@@ -2,116 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: var(--font-text);
-  transition: 0.5s;
-}
-/* Selection */
-*::selection {
-  background-color: var(--color-yellow);
-  color: var(--color-dark);
-}
-*::-moz-selection {
-  background-color: var(--color-yellow);
-  color: var(--color-dark);
-}
-html,
-body {
-  scroll-behavior: smooth;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-light);
-  font-family: var(--font-text);
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-dark) transparent;
-}
-/* ScrollBar */
-body::-webkit-scrollbar {
-  width: 10px;
-  background-color: transparent;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: var(--color-dark);
-  border-radius: 10px;
-}
-a {
-  color: #202020;
-  text-decoration: none;
-}
-main {
-  width: 100%;
-  height: 100%;
-}
-section {
-  width: 100%;
-  height: 100%;
-}
-
-/* Root Variables */
-:root {
-  --color-yellow: #c2b500;
-  --color-yellow-active: #9e9402;
-  --color-light: #ededed;
-  --color-dark: #202020;
-  --font-text: "Gagalin";
-  --font-title: "Varela Round";
-}
-
-/* Global Variables */
-.color-yellow {
-  color: var(--color-yellow);
-  font-weight: bold;
-}
-.bold {
-  font-weight: bold;
-  color: var(--color-dark);
-}
-.font-title {
-  font-family: var(--font-title);
-}
-
-/* btnScroll */
-#scrollTop {
-  display: none;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: transparent;
-  backdrop-filter: blur(20px);
-}
-#scrollTop button .fa-solid {
-  font-size: 1.5rem;
-}
-#scrollTop button {
-  width: 100%;
-  height: 100%;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-/* Animations */
-.item_hover {
-  transition: 0.25s;
-}
-.item_hover:hover {
-  transform: translateY(-0.25em);
-  cursor: pointer;
-}
-.item_hover:active {
-  transform: translateY(-0.5em);
-  cursor: pointer;
-  transition: 0.1s;
-}
-
+/* Line Hover Animation */
 .line_hover span {
   position: relative;
   padding-bottom: 5px;
@@ -123,7 +14,6 @@ section {
   content: "";
   left: 0;
   bottom: 0;
-  background-color: var(--color-dark);
   transition: all 0.2s ease;
 }
 .line_hover span:after {
@@ -134,11 +24,12 @@ section {
   width: 100%;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* ScrollBar */
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: currentColor;
+  border-radius: 10px;
 }

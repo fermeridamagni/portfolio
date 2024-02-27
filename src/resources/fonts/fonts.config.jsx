@@ -1,3 +1,4 @@
+import { Anton } from 'next/font/google';
 import LocalFont from "next/font/local";
 
 export const fontText = LocalFont({
@@ -13,3 +14,9 @@ export const fontTitle = LocalFont({
   variable: "--font-title",
   weight: "400",
 });
+
+export const fontTitleAnton = Anton({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-title-anton",
+})
