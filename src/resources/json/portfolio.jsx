@@ -50,7 +50,7 @@ export const projects = [
     type: "Página Web",
   },
   {
-    title: "Aedifika",
+    title: "Aedifika Grupo Inmobiliario",
     description: "",
     image: "/images/previews/default.webp",
     link: "https://aedifika.com",

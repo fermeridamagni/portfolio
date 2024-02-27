@@ -258,7 +258,7 @@ function PortfolioContent() {
 
             <div className="flex flex-col gap-5 text-left">
               <div>
-                <li className="list-inside">
+                <li className="list-inside text-sm md:text-md">
                   Estado:{" "}
                   <span
                     className={`font-bold
@@ -280,7 +280,7 @@ function PortfolioContent() {
                   .
                 </li>
 
-                <li className="list-inside">
+                <li className="list-inside text-sm md:text-md">
                   Tipo: <span className="font-bold">{project.type}</span>
                 </li>
               </div>
@@ -321,8 +321,15 @@ function PortfolioContent() {
       ))}
 
       <div>
-        <NextLink href="/portfolio" passHref>
-          <Button as={Link} size="lg" variant="faded" color="success" fullWidth endContent={<FontAwesomeIcon icon={faArrowRight}/>}>
+        <NextLink href="/portfolio">
+          <Button
+            as={Link}
+            size="lg"
+            variant="faded"
+            color="success"
+            fullWidth
+            endContent={<FontAwesomeIcon icon={faArrowRight} />}
+          >
             Ver más proyectos
           </Button>
         </NextLink>
