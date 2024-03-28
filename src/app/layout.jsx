@@ -9,6 +9,8 @@ import {
 } from "@/resources/fonts/fonts.config";
 import "@/resources/styles/globals.css";
 
+import { Toaster } from "sonner";
+
 export const metadata = {
   title: "Fer Merida",
   description: "",
@@ -18,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className='scroll-smooth'>
+    <html lang="es" className="scroll-smooth">
       <body
         className={`${fontText.variable} ${fontTitle.variable} ${fontTitleAnton.variable} font-text w-full h-full`}
       >
@@ -27,6 +29,8 @@ export default function RootLayout({ children }) {
             <Header />
 
             {children}
+
+            <Toaster richColors closeButton />
 
             <Footer />
           </div>

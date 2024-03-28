@@ -8,10 +8,11 @@ import { projects } from "@/resources/json/portfolio";
 import NextImage from "next/image";
 import NextLink from "next/link";
 import { useState, useMemo } from "react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Input, Textarea, Button, Image, Link } from "@nextui-org/react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
@@ -20,7 +21,6 @@ import {
   faMessage,
 } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 config.autoAddCss = false;
 
@@ -36,7 +36,7 @@ export default function HomePage() {
         title="Sobre Mi"
         description="Un poco sobre mi."
         image={{
-          src: "/images/fermeridamagni.webp",
+          src: "/fermeridamagni.webp",
           alt: "Fer Merida",
           width: 200,
           height: 355,
@@ -57,8 +57,6 @@ export default function HomePage() {
       <Section id="contact" title="Contacto" description="Forma de contacto.">
         <ContactContent />
       </Section>
-
-      <Toaster richColors closeButton />
     </>
   );
 }
@@ -95,7 +93,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="JAVASCRIPT"
-                src="/images/technologies/javascript.webp"
+                src="https://magnideveloper.com/images/technologies/javascript.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -105,7 +103,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="TYPESCRIPT"
-                src="/images/technologies/typescript.webp"
+                src="https://magnideveloper.com/images/technologies/typescript.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -115,7 +113,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="HTML"
-                src="/images/technologies/html.webp"
+                src="https://magnideveloper.com/images/technologies/html.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -125,7 +123,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="CSS"
-                src="/images/technologies/css.webp"
+                src="https://magnideveloper.com/images/technologies/css.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -142,7 +140,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="NEXTJS"
-                src="/images/technologies/nextjs.webp"
+                src="https://magnideveloper.com/images/technologies/nextjs.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -152,7 +150,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="REACT"
-                src="/images/technologies/react.webp"
+                src="https://magnideveloper.com/images/technologies/react.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -162,7 +160,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="EXPRESSJS"
-                src="/images/technologies/expressjs.webp"
+                src="https://magnideveloper.com/images/technologies/expressjs.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -172,7 +170,7 @@ function AboutMeContent() {
               <Image
                 as={NextImage}
                 alt="FIREBASE"
-                src="/images/technologies/firebase.webp"
+                src="https://magnideveloper.com/images/technologies/firebase.webp"
                 width={80}
                 height={80}
                 isBlurred
@@ -219,7 +217,7 @@ function MainContent() {
 
 function PortfolioContent() {
   return (
-    <div className="w-full md:w-[700px] h-full grid grid-cols-2 gap-8">
+    <div className="w-full md:w-[700px] h-full grid grid-cols-2 gap-2 ld:gap-8">
       {projects.slice(0, 7).map((project, index) => (
         <div
           className="flex flex-col gap-2 items-center border border-white_primary dark:border-black_primary rounded-xl shadow-lg backdrop-blur-[2px] bg-transparent p-2"
@@ -227,13 +225,17 @@ function PortfolioContent() {
         >
           <div>
             {project.link ? (
-              <NextLink href={project.link} target="_blank">
+              <NextLink href={project.info.url} target="_blank">
                 <Image
                   as={NextImage}
-                  alt={project.title}
-                  src={project.image}
+                  alt={project.image.alt}
+                  src={project.image.src}
                   width={300}
                   height={300}
+                  loading="lazy"
+                  objectFit="cover"
+                  className="max-h-[160px] w-[300px]"
+                  fallbackSrc="https://magnideveloper.com/images/skeletons/magnideveloper_background.webp"
                   isZoomed
                   isBlurred
                 />
@@ -241,8 +243,8 @@ function PortfolioContent() {
             ) : (
               <Image
                 as={NextImage}
-                alt={project.title}
-                src={project.image}
+                alt={project.image.alt}
+                src={project.image.src}
                 width={300}
                 height={300}
                 isZoomed
@@ -253,7 +255,7 @@ function PortfolioContent() {
 
           <div className="flex flex-col gap-2 w-full">
             <div>
-              <span className="text-lg font-bold">{project.title}</span>
+              <span className="text-lg font-bold">{project.info.title}</span>
             </div>
 
             <div className="flex flex-col gap-5 text-left">
@@ -263,34 +265,36 @@ function PortfolioContent() {
                   <span
                     className={`font-bold
                     ${
-                      project.state === "En Desarrollo"
+                      project.info.state === "En Desarrollo"
                         ? "text-blue-500"
-                        : project.state === "Terminado"
+                        : project.info.state === "Terminado"
                         ? "text-green-500"
-                        : project.state === "Pausado"
+                        : project.info.state === "Pausado"
                         ? "text-warning-500"
-                        : project.state === "Descontinuado"
+                        : project.info.state === "Descontinuado"
                         ? "text-danger-500"
                         : "text-neutral-500"
                     }
                   `}
                   >
-                    {project.state}
+                    {project.info.state}
                   </span>
                   .
                 </li>
 
                 <li className="list-inside text-sm md:text-md">
-                  Tipo: <span className="font-bold">{project.type}</span>
+                  Tipo: <span className="font-bold">{project.info.type}</span>
                 </li>
               </div>
 
               <div className="w-full flex justify-end items-end flex-wrap gap-2">
-                <div className={`${project.code ? "block" : "hidden"}`}>
+                <div
+                  className={`${project.info.repository ? "block" : "hidden"}`}
+                >
                   <Button
                     as={Link}
-                    href={project.code}
-                    isDisabled={!project.link ? true : false}
+                    href={project.info.repository}
+                    isDisabled={!project.info.url ? true : false}
                     size="sm"
                     variant="faded"
                     isExternal
@@ -304,8 +308,8 @@ function PortfolioContent() {
                 <div>
                   <Button
                     as={Link}
-                    href={project.link}
-                    isDisabled={!project.link ? true : false}
+                    href={project.info.url}
+                    isDisabled={!project.info.url ? true : false}
                     size="sm"
                     variant="faded"
                     isExternal
